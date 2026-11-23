@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VideoLab AI — Criação de Vídeos com Inteligência Artificial</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎬</text></svg>" />
+</head>
+<body>
+  <!-- ═══════════════════════ HEADER ═══════════════════════ -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="#" class="logo" aria-label="VideoLab AI Home">
+        <div class="logo__icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <rect width="32" height="32" rx="8" fill="url(#logoGrad)" />
+            <path d="M12 10l10 6-10 6V10z" fill="#fff" />
+            <defs>
+              <linearGradient id="logoGrad" x1="0" y1="0" x2="32" y2="32">
+                <stop stop-color="#7c3aed" />
+                <stop offset="1" stop-color="#3b82f6" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <span class="logo__text">VideoLab <span class="logo__ai">AI</span></span>
+      </a>
+
+      <nav class="nav" id="mainNav" aria-label="Navegação principal">
+        <a href="#hero" class="nav__link nav__link--active" data-nav="hero">Início</a>
+        <a href="#generator" class="nav__link" data-nav="generator">Criar Vídeo</a>
+        <a href="#history" class="nav__link" data-nav="history">Histórico</a>
+        <a href="#settings" class="nav__link" data-nav="settings">Configurações</a>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════ HERO ═══════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__content">
+      <div class="hero__badge">✦ Powered by Artificial Intelligence</div>
+      <h1 class="hero__title">
+        Transforme suas ideias em <span class="gradient-text">vídeos incríveis</span>
+      </h1>
+      <p class="hero__subtitle">
+        Descreva sua visão e deixe a inteligência artificial criar vídeos de alta qualidade em segundos. Estilo cinematográfico, animação 3D, futurista e muito mais.
+      </p>
+      <div class="hero__actions">
+        <a href="#generator" class="btn btn--primary btn--lg">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          Começar a Criar
+        </a>
+        <a href="#how-it-works" class="btn btn--ghost btn--lg">
+          Como funciona
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+      <div class="hero__stats">
+        <div class="hero__stat">
+          <span class="hero__stat-value">5</span>
+          <span class="hero__stat-label">Estilos</span>
+        </div>
+        <div class="hero__stat-divider"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-value">3</span>
+          <span class="hero__stat-label">Formatos</span>
+        </div>
+        <div class="hero__stat-divider"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-value">HD</span>
+          <span class="hero__stat-label">Qualidade</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ HOW IT WORKS ═══════════════════════ -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="container">
+      <h2 class="section-title">Como funciona</h2>
+      <p class="section-subtitle">Três passos simples para criar seu vídeo com IA</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step__number">01</div>
+          <div class="step__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          </div>
+          <h3 class="step__title">Descreva</h3>
+          <p class="step__desc">Escreva um prompt descrevendo o vídeo que deseja gerar com detalhes.</p>
+        </div>
+        <div class="step__connector"><svg width="40" height="2"><line x1="0" y1="1" x2="40" y2="1" stroke="#7c3aed" stroke-width="2" stroke-dasharray="4 4"/></svg></div>
+        <div class="step">
+          <div class="step__number">02</div>
+          <div class="step__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          </div>
+          <h3 class="step__title">Configure</h3>
+          <p class="step__desc">Escolha o estilo, duração, formato e qualidade do seu vídeo.</p>
+        </div>
+        <div class="step__connector"><svg width="40" height="2"><line x1="0" y1="1" x2="40" y2="1" stroke="#3b82f6" stroke-width="2" stroke-dasharray="4 4"/></svg></div>
+        <div class="step">
+          <div class="step__number">03</div>
+          <div class="step__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+          </div>
+          <h3 class="step__title">Gere</h3>
+          <p class="step__desc">Clique em gerar e receba seu vídeo pronto para download em segundos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ GENERATOR ═══════════════════════ -->
+  <section class="generator" id="generator">
+    <div class="container">
+      <h2 class="section-title">Criar Vídeo</h2>
+      <p class="section-subtitle">Configure os parâmetros e descreva o vídeo que deseja gerar</p>
+
+      <!-- Mode banner -->
+      <div class="mode-banner" id="modeBanner">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <div>
+          <strong>Modo Demonstração</strong> — Nenhuma API de geração de vídeo está configurada. Os vídeos não serão gerados de fato. Acesse as <a href="#settings">Configurações</a> para conectar sua API.
+        </div>
+      </div>
+
+      <div class="generator__grid">
+        <!-- Left: Form -->
+        <div class="generator__form">
+          <div class="form-card">
+            <div class="form-group">
+              <label for="prompt" class="form-label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                Prompt do Vídeo
+              </label>
+              <textarea id="prompt" class="form-textarea" rows="5" placeholder="Descreva o vídeo que deseja gerar. Exemplo: &quot;Um drone sobrevoando montanhas cobertas de neve ao pôr do sol, estilo cinematográfico, câmera lenta&quot;" maxlength="1000"></textarea>
+              <div class="form-hint">
+                <span id="charCount">0</span>/1000 caracteres
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="style" class="form-label">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                  Estilo
+                </label>
+                <select id="style" class="form-select">
+                  <option value="realistic">🎯 Realista</option>
+                  <option value="cinematic">🎬 Cinematográfico</option>
+                  <option value="animation">🎨 Animação</option>
+                  <option value="3d">💎 3D</option>
+                  <option value="futuristic">🚀 Futurista</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="duration" class="form-label">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  Duração
+                </label>
+                <select id="duration" class="form-select">
+                  <option value="5">5 segundos</option>
+                  <option value="10" selected>10 segundos</option>
+                  <option value="15">15 segundos</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                  Formato
+                </label>
+                <div class="format-options" id="formatOptions">
+                  <button type="button" class="format-btn format-btn--active" data-format="16:9" aria-label="Formato 16:9">
+                    <div class="format-preview format-preview--16-9"></div>
+                    <span>16:9</span>
+                  </button>
+                  <button type="button" class="format-btn" data-format="9:16" aria-label="Formato 9:16">
+                    <div class="format-preview format-preview--9-16"></div>
+                    <span>9:16</span>
+                  </button>
+                  <button type="button" class="format-btn" data-format="1:1" aria-label="Formato 1:1">
+                    <div class="format-preview format-preview--1-1"></div>
+                    <span>1:1</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="quality" class="form-label">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  Qualidade
+                </label>
+                <select id="quality" class="form-select">
+                  <option value="720p">720p (HD)</option>
+                  <option value="1080p" selected>1080p (Full HD)</option>
+                </select>
+              </div>
+            </div>
+
+            <button type="button" id="generateBtn" class="btn btn--primary btn--block btn--generate">
+              <svg class="btn__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              <span class="btn__text">Gerar Vídeo</span>
+              <div class="btn__loader" hidden>
+                <div class="spinner"></div>
+                <span>Gerando...</span>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right: Result -->
+        <div class="generator__result">
+          <div class="result-card" id="resultCard">
+            <!-- Empty state -->
+            <div class="result-empty" id="resultEmpty">
+              <div class="result-empty__icon">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="url(#emptyGrad)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="23 7 16 12 23 17 23 7"/>
+                  <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+                  <defs>
+                    <linearGradient id="emptyGrad" x1="0" y1="0" x2="24" y2="24">
+                      <stop stop-color="#7c3aed"/>
+                      <stop offset="1" stop-color="#3b82f6"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              <h3>Nenhum vídeo gerado</h3>
+              <p>Configure os parâmetros e clique em "Gerar Vídeo" para começar.</p>
+            </div>
+
+            <!-- Loading state -->
+            <div class="result-loading" id="resultLoading" hidden>
+              <div class="result-loading__animation">
+                <div class="pulse-ring"></div>
+                <div class="pulse-ring pulse-ring--delay"></div>
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              </div>
+              <h3>Gerando seu vídeo...</h3>
+              <p id="loadingMessage">Processando o prompt com inteligência artificial</p>
+              <div class="progress-bar">
+                <div class="progress-bar__fill" id="progressFill"></div>
+              </div>
+              <span class="progress-text" id="progressText">0%</span>
+            </div>
+
+            <!-- Success state -->
+            <div class="result-success" id="resultSuccess" hidden>
+              <div class="result-success__badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Vídeo gerado com sucesso
+              </div>
+              <div class="video-player" id="videoPlayer">
+                <video id="videoElement" controls playsinline></video>
+              </div>
+              <div class="result-meta" id="resultMeta"></div>
+              <div class="result-actions">
+                <button type="button" id="downloadBtn" class="btn btn--primary">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                  Download
+                </button>
+                <button type="button" id="newVideoBtn" class="btn btn--outline">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+                  Novo Vídeo
+                </button>
+              </div>
+            </div>
+
+            <!-- Error state -->
+            <div class="result-error" id="resultError" hidden>
+              <div class="result-error__icon">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+              </div>
+              <h3>Erro na geração</h3>
+              <p id="errorMessage">Ocorreu um erro inesperado.</p>
+              <button type="button" id="retryBtn" class="btn btn--outline">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+                Tentar novamente
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ HISTORY ═══════════════════════ -->
+  <section class="history" id="history">
+    <div class="container">
+      <div class="history__header">
+        <div>
+          <h2 class="section-title">Histórico</h2>
+          <p class="section-subtitle">Seus vídeos gerados anteriormente</p>
+        </div>
+        <button type="button" id="clearHistoryBtn" class="btn btn--ghost btn--sm" hidden>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+          Limpar tudo
+        </button>
+      </div>
+
+      <!-- Empty history -->
+      <div class="history-empty" id="historyEmpty">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <h3>Nenhum vídeo no histórico</h3>
+        <p>Os vídeos que você gerar aparecerão aqui.</p>
+      </div>
+
+      <!-- History grid -->
+      <div class="history-grid" id="historyGrid"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ SETTINGS ═══════════════════════ -->
+  <section class="settings" id="settings">
+    <div class="container">
+      <h2 class="section-title">Configurações</h2>
+      <p class="section-subtitle">Configure a integração com APIs de geração de vídeo</p>
+
+      <div class="settings__grid">
+        <div class="form-card">
+          <h3 class="settings__card-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            Chave de API
+          </h3>
+          <p class="settings__card-desc">
+            Insira sua chave da API do Google Gemini (Veo) para habilitar a geração real de vídeos. A chave é armazenada apenas localmente no seu navegador.
+          </p>
+          <div class="form-group">
+            <label for="apiKey" class="form-label">API Key</label>
+            <div class="input-with-action">
+              <input type="password" id="apiKey" class="form-input" placeholder="AIza..." autocomplete="off" />
+              <button type="button" id="toggleApiKey" class="btn btn--icon" aria-label="Mostrar/ocultar chave">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="apiProvider" class="form-label">Provedor</label>
+            <select id="apiProvider" class="form-select">
+              <option value="gemini-veo">Google Gemini (Veo 2)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="backendUrl" class="form-label">URL do Backend (opcional)</label>
+            <input type="url" id="backendUrl" class="form-input" placeholder="http://localhost:3000/api/generate" />
+            <div class="form-hint">Se você possui um servidor backend para proteger sua API key, insira a URL aqui.</div>
+          </div>
+          <div class="settings__actions">
+            <button type="button" id="saveSettingsBtn" class="btn btn--primary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+              Salvar Configurações
+            </button>
+            <button type="button" id="testConnectionBtn" class="btn btn--outline">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Testar Conexão
+            </button>
+          </div>
+        </div>
+
+        <div class="form-card">
+          <h3 class="settings__card-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            Informações
+          </h3>
+          <div class="info-block">
+            <h4>⚠️ Segurança</h4>
+            <p>Para uso em produção, <strong>nunca</strong> exponha sua API key diretamente no navegador. Utilize um servidor backend como proxy para proteger suas credenciais.</p>
+          </div>
+          <div class="info-block">
+            <h4>🔗 Como obter uma API Key</h4>
+            <ol>
+              <li>Acesse <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">Google AI Studio</a></li>
+              <li>Crie ou selecione um projeto</li>
+              <li>Gere uma API key</li>
+              <li>Certifique-se de que a API Generative AI está habilitada</li>
+            </ol>
+          </div>
+          <div class="info-block">
+            <h4>🎬 Modelos Suportados</h4>
+            <p><strong>Veo 2</strong> — Modelo de geração de vídeo do Google, acessível via Gemini API. Gera vídeos de alta qualidade a partir de prompts de texto.</p>
+          </div>
+          <div class="info-block">
+            <h4>🖥️ Backend Proxy (Recomendado)</h4>
+            <p>Para proteger sua chave, configure um backend simples com Node.js:</p>
+            <pre><code>// server.js (Node.js + Express)
+const express = require('express');
+const { GoogleGenAI } = require('@google/genai');
+
+const app = express();
+app.use(express.json());
+
+const ai = new GoogleGenAI({
+  apiKey: process.env.GEMINI_API_KEY
+});
+
+app.post('/api/generate', async (req, res) => {
+  const { prompt, config } = req.body;
+  try {
+    const operation = await ai.models
+      .generateVideos({
+        model: 'veo-2.0-generate-001',
+        prompt: prompt,
+        config: config
+      });
+    // Poll for completion...
+    let result = await operation;
+    while (!result.done) {
+      await new Promise(r => setTimeout(r, 5000));
+      result = await operation;
+    }
+    // Return video
+    const video = result.response
+      .generatedVideos[0].video;
+    res.json({ video: video.uri });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.listen(3000);</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <div class="logo">
+          <div class="logo__icon">
+            <svg width="24" height="24" viewBox="0 0 32 32" fill="none">
+              <rect width="32" height="32" rx="8" fill="url(#logoGrad2)" />
+              <path d="M12 10l10 6-10 6V10z" fill="#fff" />
+              <defs>
+                <linearGradient id="logoGrad2" x1="0" y1="0" x2="32" y2="32">
+                  <stop stop-color="#7c3aed" />
+                  <stop offset="1" stop-color="#3b82f6" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <span class="logo__text">VideoLab <span class="logo__ai">AI</span></span>
+        </div>
+        <p>Crie vídeos incríveis com inteligência artificial.</p>
+      </div>
+      <div class="footer__copy">
+        &copy; 2026 VideoLab AI — Todos os direitos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════ TOAST ═══════════════════════ -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- ═══════════════════════ CONFIRM MODAL ═══════════════════════ -->
+  <div class="modal-overlay" id="confirmModal" hidden>
+    <div class="modal">
+      <h3 class="modal__title" id="modalTitle">Confirmar</h3>
+      <p class="modal__message" id="modalMessage">Tem certeza?</p>
+      <div class="modal__actions">
+        <button type="button" class="btn btn--ghost" id="modalCancel">Cancelar</button>
+        <button type="button" class="btn btn--danger" id="modalConfirm">Confirmar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
